@@ -1,0 +1,15 @@
+name: Analytics
+on: push
+
+jobs:
+  pester-test:
+    name: validate aliasses
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Validate Kust Aliasses
+        uses: SecureHats/kusto-alias@v1
+        with:
+          filesPath: templates
+          logLevel: Minimal

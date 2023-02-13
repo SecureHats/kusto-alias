@@ -1,7 +1,7 @@
-id: c9b6d281-b96b-4763-b728-9a04b9fe1246
-name: Cisco Umbrella - Connection to non-corporate private network
+id: de58ee9e-b229-4252-8537-41a4c2f4045e
+name: Cisco Umbrella - Request to blocklisted file type
 description: |
-  'IP addresses of broadband links that usually indicates users attempting to access their home network, for example for a remote session to a home computer.'
+  'Detects request to potentially harmful file types (.ps1, .bat, .vbs, etc.).'
 severity: Medium
 requiredDataConnectors:
   - connectorId: CiscoUmbrellaDataConnector
@@ -12,21 +12,20 @@ queryPeriod: 10m
 triggerOperator: gt
 triggerThreshold: 0
 tactics:
-  - CommandAndControl
-  - Exfiltration
+  - InitialAccess
 query: |
+  let file_ext_blocklist = dynamic(['.ps1', '.vbs', '.bat', '.scr']);
   let lbtime = 10m;
   Cisco_Umbrella
   | where TimeGenerated > ago(lbtime)
   | where EventType == 'proxylogs'
   | where DvcAction =~ 'Allowed'
-  | where UrlCategory has_any ('Dynamic and Residential', 'Personal VPN')
-  | project TimeGenerated, SrcIpAddr, Identities
+  | extend file_ext = extract(@'.*(\.\w+)$', 1, UrlOriginal)
+  | extend Filename = extract(@'.*\/*\/(.*\.\w+)$', 1, UrlOriginal)
+  | where file_ext in (file_ext_blocklist)
+  | project TimeGenerated, SrcIpAddr, Identities, Filename
   | extend IPCustomEntity = SrcIpAddr
   | extend AccountCustomEntity = Identities
-  | extend var_remove = pack(
-    'test', 'value'
-  )
 entityMappings:
   - entityType: Account
     fieldMappings:
@@ -36,6 +35,5 @@ entityMappings:
     fieldMappings:
       - identifier: Address
         columnName: IPCustomEntity
-version: 1.1.0
+version: 1.0.0
 kind: Scheduled
-

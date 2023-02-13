@@ -34,10 +34,10 @@ Describe "Detections" {
             $query = (($yamlObject.query)) #-split "\n")
 
             #foreach ($line in $query) {
-                $i++
+                #$i++
                 foreach ($value in $aliasses) {
                     if ($query -match ($($value.alias) + '\(')) {
-                        $value.alias | Should -Be $value.command -Because "[$($value.alias)] is deprecated and replaced by [$($value.command)]"
+                        $value.alias | Should -Be $value.command -Because "it is deprecated and replaced by [$($value.command)]"
                         # $i = 0
                     }
                 }

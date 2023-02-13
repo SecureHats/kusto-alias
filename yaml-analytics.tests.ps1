@@ -32,16 +32,11 @@ Describe "Detections" {
                 $yamlObject
             )
             $query = (($yamlObject.query)) #-split "\n")
-
-            #foreach ($line in $query) {
-                #$i++
-                foreach ($value in $aliasses) {
-                    if ($query -match ($($value.alias) + '\(')) {
-                        $value.alias | Should -BeLike $value.command -Because "it is deprecated and replaced by [$($value.command)]"
-                        # $i = 0
-                    }
+            foreach ($value in $aliasses) {
+                if ($query -match ($($value.alias) + '\(')) {
+                    $value.alias | Should -Match $value.command -Because "it is deprecated and replaced by [$($value.command)]"
                 }
-            #}
+            }
         }
     }
 }

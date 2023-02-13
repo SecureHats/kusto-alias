@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - name: Validate Kust Aliasses
+      - name: Validate Kusto Aliasses
         uses: SecureHats/kusto-alias@v1
         with:
           filesPath: templates

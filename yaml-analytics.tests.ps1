@@ -34,7 +34,7 @@ Describe "Detections" {
             $query = (($yamlObject.query)) #-split "\n")
             foreach ($value in $aliasses) {
                 if ($query -match ($($value.alias) + '\(')) {
-                    $value.alias | Should -Be $value.command -Because "[$($value.alias)] is deprecated value"
+                    $value.alias | Should -BeExactly $value.command -Because "[$($value.alias)] is deprecated value"
                 }
             }
         }

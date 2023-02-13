@@ -37,7 +37,7 @@ Describe "Detections" {
                 #$i++
                 foreach ($value in $aliasses) {
                     if ($query -match ($($value.alias) + '\(')) {
-                        $value.alias | Should -ExpectedValue $value.command -Because "it is deprecated and replaced by [$($value.command)]"
+                        $value.alias | Should -BeLike $value.command -Because "it is deprecated and replaced by [$($value.command)]"
                         # $i = 0
                     }
                 }

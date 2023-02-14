@@ -35,8 +35,6 @@ This Action defines the following formal inputs.
 
 ## Current incuded tests
 
-![image](https://user-images.githubusercontent.com/40334679/170026369-fa0fa7b8-e580-42d4-9c2d-c36edb506094.png)
-
 ## Current limitations / Under Development
 
 - [x] Only YAML is supported in the Alpha

@@ -9,7 +9,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: Validate Kusto Aliasses
-        uses: SecureHats/kusto-alias@v0.0.11
+        uses: SecureHats/kusto-alias@v0.1.0-alpha
         with:
           filesPath: templates
-          logLevel: Detailed
+          logLevel: Minimal

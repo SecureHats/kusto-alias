@@ -1,13 +1,13 @@
 ![logo](https://raw.githubusercontent.com/SecureHats/SecureHacks/main/media/sh-banners.png)
 =========
 [![Maintenance](https://img.shields.io/maintenance/yes/2022.svg?style=flat-square)]()
-# Microsoft Sentinel - Analytics Rules Validator
+# Microsoft Sentinel - Analytics Rules Alias Validator
 
 This GitHub action can be used to validate Microsoft Sentinel Analytics rules in both JSON and YML format.
 >Add the following code block to your Github workflow:
 
 ```yaml
-name: Analytics
+name: Aliasses
 on: push
 
 jobs:
@@ -18,7 +18,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: Validate Sentinel Analytics Rules
-        uses: SecureHats/validate-detections@v1
+        uses: SecureHats/kusto-alias@v0.1.0-alpha
         with:
           filesPath: templates
           logLevel: Minimal
@@ -39,5 +39,6 @@ This Action defines the following formal inputs.
 
 ## Current limitations / Under Development
 
-- No support for Hunting Queries
-- No support for Fusion rules
+- [x] Only YAML is supported in the Alpha
+- [ ] Support for JSON files
+- [ ] Support for ASIM Parsers

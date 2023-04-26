@@ -1,4 +1,4 @@
-alias, command, depricated
+alias, command, deprecated
 parseurl, parse_url, true
 columnifexists, column_ifexists, true
 any, take_any, true

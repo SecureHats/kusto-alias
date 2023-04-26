@@ -9,9 +9,6 @@ make_string, unicode_codepoints_to_string, true
 replace, replace_regex, true
 extractall, extract_all, true
 base64_encodestring, base64_encode_tostring, true
-replace, replace_regex, true
-extractall, extract_all, true
-base64_encodestring, base64_encode_string, true
 arraylength, array_length, true
 replace, replace_string, true
 weekofyear, week_of_year, true
@@ -32,3 +29,4 @@ toobject, parse_json, true
 todynamic, parse_json, true
 makeset, make_set, true
 make_bag, make_dictionary, true
+extentid, extent_id, true

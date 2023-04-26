@@ -21,7 +21,7 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - name: Validate Sentinel Analytics Rules
-        uses: SecureHats/kusto-alias@v0.1.0-alpha
+        uses: SecureHats/kusto-alias@v0.1.2-alpha
         with:
           filesPath: templates
           logLevel: Minimal

@@ -39,9 +39,11 @@ This Action defines the following formal inputs.
 | **`filesPath`**  | false | Path to the directory that contain the files to be tested, relative to the root of the project. This path is optional and defaults to the project root, in which case all files across the entire project tree will be discovered.
 | **`logLevel`** | false | This indicates the verbosity of the testing engine. The default is set to `Normal` which shows all the passed and failed tests in the output. Optional values are `None, Minimal, Normal, Detailed, Diagnostic` When using `Minimal` only non-passed test results will be shown. The available verbosity options are based on the [pester](https://pester-docs.netlify.app/docs/commands/Invoke-Pester#-show) documentation. 
 
-## Current included tests
+## Example output
 
-> N/A
+![image](https://user-images.githubusercontent.com/40334679/235288882-d4367299-79d0-46f8-8fbe-42df0c648fe4.png)
+
+![image](https://user-images.githubusercontent.com/40334679/235288842-bbc1e2cc-17b8-4c40-88c7-c80cc0217a97.png)
 
 ## Current limitations / Under Development
 

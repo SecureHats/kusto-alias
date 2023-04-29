@@ -45,6 +45,8 @@ This Action defines the following formal inputs.
 
 ## Current limitations / Under Development
 
-- [x] Only YAML is supported in the Alpha
-- [ ] Support for JSON files
-- [ ] Support for ASIM Parsers
+See backlog
+
+If you encounter any issues, or hae suggestions for improvements, feel free to open an Issue
+
+[Create Issue](../../issues/new/choose)

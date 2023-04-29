@@ -4,7 +4,6 @@
 [![codecov](https://codecov.io/gh/Azure/bicep/branch/main/graph/badge.svg)](https://codecov.io/gh/Azure/bicep)
 [![Good First Issues](https://img.shields.io/github/issues/SecureHats/kusto-alias/good%20first%20issue?color=important&label=good%20first%20issue&style=flat)](https://github.com/SecureHats/kusto-alias/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 [![Needs Feedback](https://img.shields.io/github/issues/SecureHats/kusto-alias/needs%20feedback?color=blue&label=needs%20feedback%20&style=flat)](https://github.com/SecureHats/kusto-alias/issues?q=is%3Aopen+is%3Aissue+label%3A%22needs+feedback%22)
-[![GitHub Workflow - CI](https://github.com/SecureHats/kusto-alias/workflows/test-action/badge.svg)](https://github.com/SecureHats/kusto-alias/actions?workflow=test-action)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/SecureHats/kusto-alias)](https://github.com/SecureHats/kusto-alias/releases/latest)
 
 # Microsoft Sentinel - Analytics Rules Alias Validator

@@ -22,11 +22,12 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
+      
       - name: Validate Sentinel Analytics Rules
         uses: SecureHats/kusto-alias@v0.2.0
         with:
           filesPath: templates
-          logLevel: Minimal
+          logLevel:  Minimal
 ```
 
 ### Inputs

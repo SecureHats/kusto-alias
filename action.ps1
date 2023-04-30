@@ -24,9 +24,8 @@ $modulesToInstall | ForEach-Object {
     Import-Module $_ -Force
 }
 
-# Import Mitre Att&ck mapping
+# Import KQL value mapping
 Write-Output 'Loading kusto aliasses'
-#$global:aliasses = (Get-ChildItem -Path "C:\Users\RogierDijkman\Repos\SecureHats\kusto-alias\kusto-alias.csv" -Recurse | Get-Content | ConvertFrom-CSV)
 $global:aliasses = (Get-ChildItem -Path "$($PSScriptRoot)\kusto-alias.csv" -Recurse | Get-Content | ConvertFrom-CSV)
 
 if ($FilesPath -ne '.') {

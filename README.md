@@ -27,7 +27,7 @@ jobs:
         uses: SecureHats/kusto-alias@v0.2.0
         with:
           filesPath: templates
-          logLevel:  Minimal
+          logLevel:  Detailed
 ```
 
 ### Inputs
@@ -43,7 +43,8 @@ This Action defines the following formal inputs.
 
 ![image](https://user-images.githubusercontent.com/40334679/235288882-d4367299-79d0-46f8-8fbe-42df0c648fe4.png)
 
-![image](https://user-images.githubusercontent.com/40334679/235288842-bbc1e2cc-17b8-4c40-88c7-c80cc0217a97.png)
+![image](https://user-images.githubusercontent.com/40334679/235346394-3f1b248d-d0da-41f8-88cb-34a3cd01638b.png)
+
 
 ## Current limitations / Under Development
 

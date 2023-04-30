@@ -26,7 +26,7 @@ Describe "Detections" {
 
     Context "Properties" {
 
-        It 'Alias should not be deprecated | <Name>' -TestCases $testCases {
+        It 'Query should not contain a deprecated value | <Name>' -TestCases $testCases {
             param (
                 $file,
                 $yamlObject

@@ -24,7 +24,17 @@ jobs:
         uses: actions/checkout@v3
       
       - name: Validate Sentinel Analytics Rules
-        uses: SecureHats/kusto-alias@v0.2.0
+        uses: SecureHats/kusto-alias@v0.3.0
+        with:
+          filesPath: templates
+          logLevel:  Detailed
+```
+
+To integrate the `kusto-alias` action in to your existing GitHub workflow, just add the action to your step.
+
+```yaml
+- name: Validate Sentinel Analytics Rules
+        uses: SecureHats/kusto-alias@v0.3.0
         with:
           filesPath: templates
           logLevel:  Detailed
@@ -46,9 +56,12 @@ This Action defines the following formal inputs.
 ![image](https://user-images.githubusercontent.com/40334679/235346394-3f1b248d-d0da-41f8-88cb-34a3cd01638b.png)
 
 
-## Current limitations / Under Development
+## In Development
 
-See backlog
+- [x] Support for `ARM` templates
+- [x] Support for Microsoft Sentinel parsers  
+
+### See backlog
 
 If you encounter any issues, or hae suggestions for improvements, feel free to open an Issue
 
